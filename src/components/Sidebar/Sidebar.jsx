@@ -1,6 +1,10 @@
 import { Box, Slider, Typography } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import BuildCircleOutlinedIcon from "@mui/icons-material/BuildCircleOutlined";
+import RealEstateAgentIcon from "@mui/icons-material/RealEstateAgent";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import EngineeringIcon from "@mui/icons-material/Engineering";
+import GroupsIcon from "@mui/icons-material/Groups";
 import { Link, useLocation } from "react-router-dom";
 
 export const Sidebar = () => {
@@ -40,18 +44,23 @@ export const Sidebar = () => {
   });
 
   const menuItems = [
-    { label: "Overview", icon: <DashboardIcon />, path: "/dashboard" },
+    { label: "Overview", icon: <DashboardIcon />, path: "/" },
     { label: "Jobs", icon: <BuildCircleOutlinedIcon />, path: "/jobs" },
     {
       label: "Properties",
-      icon: <BuildCircleOutlinedIcon />,
+      icon: <RealEstateAgentIcon />,
       path: "/properties",
     },
-    { label: "Tenants", icon: <BuildCircleOutlinedIcon />, path: "/tenants" },
+    { label: "Tenants", icon: <PeopleAltIcon />, path: "/tenants" },
     {
       label: "Landlords",
-      icon: <BuildCircleOutlinedIcon />,
+      icon: <GroupsIcon />,
       path: "/landlords",
+    },
+    {
+      label: "Contractors",
+      icon: <EngineeringIcon />,
+      path: "/contractors",
     },
   ];
 

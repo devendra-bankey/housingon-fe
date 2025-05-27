@@ -1,14 +1,24 @@
-import "./App.css";
-import { Navbar } from "./components/Sidebar/Navbar";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Routes, Route } from "react-router-dom";
+import { MainLayout } from "./layouts/MainLayout";
+import Tenants from "./pages/admin/Tenants";
+import Contractors from "./pages/admin/Contractors";
+import Jobs from "./pages/admin/Jobs";
+import Properties from "./pages/admin/Properties";
+import Landlords from "./pages/admin/Landlords";
+import Dashboard from "./pages/admin/Dashboard";
 
 function App() {
   return (
-    <>
-      <Sidebar />
-      <Navbar />
-      <h1 class="text-3xl font-bold underline mt-10">Hello world!</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="tenants" element={<Tenants />} />
+        <Route path="contractors" element={<Contractors />} />
+        <Route path="jobs" element={<Jobs />} />
+        <Route path="properties" element={<Properties />} />
+        <Route path="landlords" element={<Landlords />} />
+      </Route>
+    </Routes>
   );
 }
 

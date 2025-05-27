@@ -10,7 +10,8 @@ const theme = createTheme({
       light: "#FFC8C8", // Destructive Muted
     },
     background: {
-      default: "#E2E8F0", // Ghost
+      // default: "#E2E8F0", // Ghost
+      default: "#eef2f6", // Ghost
     },
     success: {
       main: "#22BA62",

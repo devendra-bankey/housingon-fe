@@ -9,8 +9,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/theme.js";
-// import { Sidebar } from "./components/Sidebar/Sidebar.jsx";
-import { Navbar } from "./components/Sidebar/Navbar.jsx";
 import { BrowserRouter } from "react-router-dom";
 createRoot(document.getElementById("root")).render(
   <StrictMode>

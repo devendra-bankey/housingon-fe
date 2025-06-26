@@ -7,7 +7,7 @@ const identifyMe = async () => {
 };
 const loginUser = async (data) => {
   const response = await api.post("/user/login", data);
-  // console.log("working");
+  console.log(import.meta.env.VITE_API_BASE_URL);
   return response.data;
 };
 const logoutUser = async () => {

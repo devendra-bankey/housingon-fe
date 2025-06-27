@@ -7,6 +7,7 @@ import Properties from "../pages/admin/Properties";
 import Landlords from "../pages/admin/Landlords";
 import Dashboard from "../pages/admin/Dashboard";
 import Login from "../pages/Login";
+import ProtectedRoute from "../components/common/ProtectedRoute";
 
 const IndexRouter = () => {
   return (
@@ -14,7 +15,14 @@ const IndexRouter = () => {
       <Route path="/">
         <Route index element={<Login />} />
       </Route>
-      <Route path="/admin" element={<MainLayout />}>
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <MainLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route index element={<Dashboard />} />
         <Route path="tenants" element={<Tenants />} />
         <Route path="contractors" element={<Contractors />} />

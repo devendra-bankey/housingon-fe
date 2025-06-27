@@ -80,6 +80,9 @@ const authSlice = createSlice({
       .addCase(logoutUserThunk.fulfilled, (state) => {
         state.user = null;
         state.isAuthenticated = false;
+      })
+      .addCase(getCurrentUserThunk.rejected, (state, action) => {
+        state.user = null; // Ensure no user is stored if /me fails
       });
   },
 });
